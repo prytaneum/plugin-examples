@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = ["plugins/*"]
+exclude = ["plugins/theme-ember-night"]
+
+[workspace.dependencies]
+hestia-sdk = { git = "https://github.com/prytaneum/hestia", branch = "feature/plugins" }
+
+[workspace.metadata.hestia]
+name = "Hestia plugin examples"
+label = "EX"
+website = "https://github.com/prytaneum/plugin-examples"
+key = "RWQBpwDZCvXLAkTHoD5h+81wTOM8q0c/cqzIq4J42GMmJGJe92JLHjQR"

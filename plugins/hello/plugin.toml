@@ -1,0 +1,5 @@
+id = "hello"
+name = "Hello"
+version = "0.1.0"
+description = "Logs a greeting on load and saves it to its data directory."
+wasm = "plugin.wasm"

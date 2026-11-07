@@ -1,0 +1,11 @@
+id = "static-index"
+name = "Static index"
+version = "0.1.0"
+description = "A content source that serves a JSON index compiled into the component."
+wasm = "plugin.wasm"
+permissions = ["content:read", "network:connect"]
+network = ["index.example.com"]
+
+[[contributes.providers]]
+kind = "content"
+id = "index"
