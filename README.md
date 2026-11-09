@@ -8,6 +8,7 @@ plugin API; none is meant to be installed for real use.
 | [`hello`](plugins/hello) | the smallest component: `init`, logging, the data directory, a command (`Plugin::run`) and an event (`Plugin::on_event`) |
 | [`static-index`](plugins/static-index) | a `content` provider: `Plugin::provide` routing each operation with `.on::<Op>(…)` |
 | [`tunnel-demo`](plugins/tunnel-demo) | `process:spawn`: a declared program started and stopped with a server |
+| [`launch-flags`](plugins/launch-flags) | a `before-launch` hook: JVM flags on the host's allowlist, chosen by a plugin setting |
 | [`discord-presence`](plugins/discord-presence) | `ipc:connect`: Discord Rich Presence written entirely in the plugin, over Discord's local socket |
 | [`theme-ember-night`](plugins/theme-ember-night) | a theme-only plugin: no component, only CSS variables |
 

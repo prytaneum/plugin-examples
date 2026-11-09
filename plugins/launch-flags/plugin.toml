@@ -1,0 +1,17 @@
+id = "launch-flags"
+name = "Launch flags"
+version = "0.1.0"
+description = "Adds garbage collector flags to every instance launch."
+wasm = "plugin.wasm"
+permissions = ["launch:patch", "account:read"]
+
+[[settings]]
+key = "collector"
+kind = "select"
+label = "Garbage collector"
+help = "Applies from the next launch."
+default = "g1"
+options = ["g1", "zgc"]
+
+[contributes]
+hooks = ["before-launch"]
