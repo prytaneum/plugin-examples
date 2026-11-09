@@ -96,7 +96,11 @@ fn connect(client_id: &str) -> Result<Connection, Error> {
             let Ok(discord) = ipc::open(&format!("{prefix}discord-ipc-{n}")) else {
                 continue;
             };
-            send(&discord, HANDSHAKE, &json!({ "v": 1, "client_id": client_id }))?;
+            send(
+                &discord,
+                HANDSHAKE,
+                &json!({ "v": 1, "client_id": client_id }),
+            )?;
             drain(&discord);
             return Ok(discord);
         }
