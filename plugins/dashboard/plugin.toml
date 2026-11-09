@@ -1,0 +1,19 @@
+id = "dashboard"
+name = "Dashboard"
+version = "0.1.0"
+description = "A sidebar page counting your entries, and a notes tab on every server."
+wasm = "plugin.wasm"
+permissions = ["entry:read"]
+
+[[contributes.pages]]
+id = "overview"
+title = "Dashboard"
+slot = "nav"
+icon = "plugin"
+
+[[contributes.pages]]
+id = "notes"
+title = "Notes"
+slot = "entry"
+kind = "server"
+icon = "server"
