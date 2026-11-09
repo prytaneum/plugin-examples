@@ -6,8 +6,9 @@ plugin API; none is meant to be installed for real use.
 | Plugin | Shows |
 |---|---|
 | [`hello`](plugins/hello) | the smallest component: `init`, logging, the data directory |
-| [`static-index`](plugins/static-index) | a content source (`content-source` export) |
+| [`static-index`](plugins/static-index) | a `content` provider: `Plugin::provide` routing each operation with `.on::<Op>(…)` |
 | [`tunnel-demo`](plugins/tunnel-demo) | `process:spawn`: a declared program started and stopped with a server |
+| [`discord-presence`](plugins/discord-presence) | `ipc:connect`: Discord Rich Presence written entirely in the plugin, over Discord's local socket |
 | [`theme-ember-night`](plugins/theme-ember-night) | a theme-only plugin: no component, only CSS variables |
 
 The repository follows the [plugin repository shape](https://github.com/prytaneum/hestia/blob/main/docs/plugins/repository.md).

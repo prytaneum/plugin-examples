@@ -1,0 +1,23 @@
+id = "discord-presence"
+name = "Discord presence"
+version = "0.1.0"
+description = "Shows the instance you are playing on Discord, talking to Discord's local socket itself."
+wasm = "plugin.wasm"
+permissions = ["ipc:connect", "entry:read", "process:read"]
+# Discord's socket, in the plain, Flatpak and Snap locations (a named pipe on Windows).
+ipc = [
+    "discord-ipc-*",
+    "app/com.discordapp.Discord/discord-ipc-*",
+    "snap.discord/discord-ipc-*",
+]
+
+[[settings]]
+key = "client-id"
+kind = "string"
+label = "Discord application id"
+help = "The id of a Discord application you created; its assets name the images."
+
+[contributes]
+# `process.metrics` arrives every few seconds while something runs: it retries a
+# Discord that started after the game.
+events = ["process.started", "process.exit", "process.metrics"]
