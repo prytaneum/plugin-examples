@@ -5,7 +5,7 @@ plugin API; none is meant to be installed for real use.
 
 | Plugin | Shows |
 |---|---|
-| [`hello`](plugins/hello) | the smallest component: `init`, logging, the data directory |
+| [`hello`](plugins/hello) | the smallest component: `init`, logging, the data directory, a command (`Plugin::run`) and an event (`Plugin::on_event`) |
 | [`static-index`](plugins/static-index) | a `content` provider: `Plugin::provide` routing each operation with `.on::<Op>(…)` |
 | [`tunnel-demo`](plugins/tunnel-demo) | `process:spawn`: a declared program started and stopped with a server |
 | [`discord-presence`](plugins/discord-presence) | `ipc:connect`: Discord Rich Presence written entirely in the plugin, over Discord's local socket |

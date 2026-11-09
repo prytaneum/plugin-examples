@@ -1,5 +1,19 @@
 id = "hello"
 name = "Hello"
 version = "0.1.0"
-description = "Logs a greeting on load and saves it to its data directory."
+description = "Logs a greeting on load, greets by command, and logs when something starts."
 wasm = "plugin.wasm"
+permissions = ["process:read"]
+
+[contributes]
+events = ["process.started"]
+
+[[contributes.commands]]
+id = "greet"
+title = "Greet"
+description = "Say hello"
+
+[[contributes.commands.args]]
+name = "name"
+kind = "string"
+help = "Who to greet"
